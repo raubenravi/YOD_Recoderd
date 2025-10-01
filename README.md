@@ -76,7 +76,7 @@ Connect components to these ESP32 pins:
 
 ### 1. Get the Code
 ```bash
-git clone [<repository-url>](https://github.com/raubenravi/YOD_Recoderd)
+git clone https://github.com/raubenravi/YOD_Recoderd
 cd "YOD Recoder"
 ```
 
