@@ -1,0 +1,40 @@
+dependencies:
+  espressif/esp-dsp:
+    component_hash: ccfd6c9a7799cf66ee044d0239a0e9304431564495d80b3230083c58291a2a23
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.6.4
+  espressif/led_strip:
+    component_hash: 28c6509a727ef74925b372ed404772aeedf11cce10b78c3f69b3c66799095e2d
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.5.5
+  idf:
+    source:
+      type: idf
+    version: 5.4.1
+  nopnop2002/ssd1306:
+    component_hash: 5db7a384bbe9c24a65a514881e31633f00922156ab606d7d87253bec7542125a
+    dependencies: []
+    source:
+      git: https://github.com/nopnop2002/esp-idf-ssd1306.git
+      path: components/ssd1306/
+      type: git
+    version: f0770f10b5d4ed037118f41a39a5f8a23d19113a
+direct_dependencies:
+- espressif/esp-dsp
+- espressif/led_strip
+- nopnop2002/ssd1306
+manifest_hash: fe6481b2489a663925acfda1a883bbc842fd2bdf89e2ae4ab4a806302ced9ce3
+target: esp32
+version: 2.0.0
