@@ -1,0 +1,43 @@
+# ESP-IDF build output
+/build/
+/managed_components/
+/esp-idf/
+/sdkconfig
+/sdkconfig.old
+/CMakeLists.txt.user
+/.vscode/
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.log
+
+# Test build directories
+/test/*/build/
+/test/*/managed_components/
+/test/*/sdkconfig
+
+# Doxygen output
+doxygen/
+
+# ESP-IDF Python environment
+/venv/
+/.env/
+/.env.*
+
+# Compiled object files
+*.o
+*.obj
+*.elf
+*.bin
+*.map
+
+# Core dumps
+core.*
+
+# Misc
+.DS_Store
+Thumbs.db

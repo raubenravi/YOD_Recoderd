@@ -83,7 +83,7 @@ cd "YOD Recoder"
 ### 2. Setup Environment
 **Windows PowerShell:**
 ```powershell
-& "$env:IDF_PATH\export.ps1"
+export IDF_PATH=~/esp/esp-idf
 ```
 
 **Windows Command Prompt:**
@@ -91,10 +91,7 @@ cd "YOD Recoder"
 %IDF_PATH%\export.bat
 ```
 
-**macOS/Linux:**
-```bash
-. $IDF_PATH/export.sh
-```
+
 
 ### 3. Build and Flash
 ```bash
