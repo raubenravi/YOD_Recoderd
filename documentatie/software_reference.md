@@ -146,6 +146,36 @@ The `AudioModem` class extends `PWMChannel` to implement Frequency Shift Keying 
 
 This component is essential for encoding patient and research data into audio signals that can be recorded by the Tascam recorder and later decoded for analysis.
 
+## Audio Modem Transmission Protocol
+
+The audio modem transmits data as a structured packet with the following byte sequence:
+
+| Byte Position | Data Type | Description | Value/Range | Notes |
+|---------------|-----------|-------------|-------------|--------|
+| 1 | Sync | Synchronization byte 1 | 1 | Fixed sync pattern |
+| 2 | Sync | Synchronization byte 2 | 2 | Fixed sync pattern |
+| 3 | Sync | Synchronization byte 3 | 3 | Fixed sync pattern |
+| 4 | Session ID | Current session identifier | 0-255 (uint64_t truncated) | Incremented for each new session |
+| 5 | Time | Current minute | 0-59 | From RTC tm_min |
+| 6 | Time | Current hour | 0-23 | From RTC tm_hour |
+| 7 | Time | Day of month | 1-31 | From RTC tm_mday |
+| 8 | Time | Month | 0-11 | From RTC tm_mon (0=Jan, 11=Dec) |
+| 9 | Time | Year | Year offset | From RTC tm_year (years since 1900) |
+| 10 | Flag | Patient number indicator | 1 or 2 | 1=patient number follows, 2=no patient number |
+| 11* | Patient | First patient number digit | 0-9 | Only if flag=1 |
+| 12* | Patient | Second patient number digit | 0-9 | Only if flag=1 |
+| Last | Terminator | End marker | 3 | Fixed termination byte |
+
+**Protocol Notes:**
+- Bytes marked with * are conditional based on whether a patient number was scanned
+- The session ID is transmitted as a single byte (truncated from uint64_t)
+- Time values follow standard C `tm` structure format
+- The protocol uses byte values 1, 2, 3 for synchronization and termination
+- Total packet length: 10 bytes (no patient) or 12 bytes (with patient)
+- Each byte is transmitted using FSK modulation with 20ms per bit (160ms per byte)
+
+This protocol allows the receiver to synchronize with the transmission, extract session metadata, timestamp information, and optionally patient identification data.
+
 
 
 

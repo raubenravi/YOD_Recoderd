@@ -88,7 +88,7 @@ dependencies:
   idf:
     source:
       type: idf
-    version: 5.4.1
+    version: 5.4.0
   nopnop2002/ssd1306:
     component_hash: 6b7041f67f741708947c72b707087520100486286df9bc1536b42c46040c577b
     dependencies: []
