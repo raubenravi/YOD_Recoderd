@@ -105,7 +105,7 @@ idf.py -p COM3 flash
 ```bash
 idf.py -p COM3 monitor
 ```
-*Press Ctrl+] to exit*
+
 
 ## How It Works
 
