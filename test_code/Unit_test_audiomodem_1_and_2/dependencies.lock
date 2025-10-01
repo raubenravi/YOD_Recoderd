@@ -1,0 +1,24 @@
+dependencies:
+  esp-idf-lib/esp_idf_lib_helpers:
+    dependencies: []
+    source:
+      path: C:\Users\ruben\Documents\YOD_RECODER\YOD Recoder\managed_components\esp-idf-lib__esp_idf_lib_helpers
+      type: local
+    version: 1.3.10
+  esp-idf-lib/i2cdev:
+    dependencies: []
+    source:
+      path: C:\Users\ruben\Documents\YOD_RECODER\YOD Recoder\managed_components\esp-idf-lib__i2cdev
+      type: local
+    version: 2.0.8
+  idf:
+    source:
+      type: idf
+    version: 5.4.1
+direct_dependencies:
+- esp-idf-lib/esp_idf_lib_helpers
+- esp-idf-lib/i2cdev
+- idf
+manifest_hash: 67b8cae1d60a88b16a8e817e01f0553df81d93bed0d4ff89e5189cffdad35a1d
+target: esp32
+version: 2.0.0

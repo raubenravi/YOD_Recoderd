@@ -4,7 +4,7 @@ ESP32-based audio recording system for research applications with QR code scanni
 
 # Developer Responsibility
 
-**⚠️ IMPORTANT NOTICE ⚠️**
+** IMPORTANT NOTICE **
 
 This system is designed for research and development purposes. **Before using this system in real-life applications, especially in medical or research environments, developers and users must:**
 
@@ -110,9 +110,9 @@ idf.py -p COM3 monitor
 ## How It Works
 
 ### Controls
-- **Research Button**: Start/pause research recording
-- **Select Button**: Start recording  
-- **Stop Button**: Stop all recording
+- **Green Research Button**: Start research recording
+- **Yellow Research Button**: pauze recording  
+- **Red Research Button**: Stop all recording
 - **Patient Button**: Patient pause (external case)
 
 ### Features
@@ -129,7 +129,8 @@ idf.py -p COM3 monitor
 YOD Recoder/
 ├── code_esp32/main/    # Main application code
 ├── components/         # Custom components  
-├── test/               # Unit and integration tests
+├── test_code/               # Unit and integration tests
 └── build/             # Generated files
+
 
 ```

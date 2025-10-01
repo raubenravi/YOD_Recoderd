@@ -1,7 +1,6 @@
 idf_component_register(SRCS 
     "main.cpp"
     "src/adcHandler.cpp"
-    
     "src/tascamBoundary.cpp"
     "src/buttonBoundary.cpp"
     "src/menuController.cpp"
