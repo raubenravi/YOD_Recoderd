@@ -1,7 +1,7 @@
 # YOD Recorder - ESP32 Audio Recording System
 
 ESP32-based audio recording system for research applications with QR code scanning and external hardware control.
-This project contains the software developed for a graduation internship at the Hogeschool Utrecht research group (lectoraat).
+This project contains the software developed for a graduation internship at the Hogeschool Utrecht research group artificial intelligence (lectoraat Ai).
 
 # Developer Responsibility
 
